@@ -1,7 +1,9 @@
 {
     "name": "hexlet/code",
     "type": "project",
+    "description": "educational php-project",
     "license": "MIT",
+    "bin": ["bin/brain-games"],
     "authors": [
         {
             "name": "smirtan",
