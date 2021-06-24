@@ -1,11 +1,8 @@
 name: make-lint
 
 on:
-  push:
-    branches:
-      - '**'
-    tags:
-      - '**'
+  - push
+  - pull_request
 
 jobs:
   build:
@@ -14,5 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: make lint
-        run: composer exec --verbose phpcs -- --standard=PSR12 src bin
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+      
+      - name: install
+        run: make install
+      - name: linter
+        run: make lint
