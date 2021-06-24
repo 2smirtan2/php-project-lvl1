@@ -1,0 +1,18 @@
+name: make-lint
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+   
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: make lint
+        run: composer exec --verbose phpcs -- --standard=PSR12 src bin
