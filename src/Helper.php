@@ -33,3 +33,14 @@ function gcd($num1, $num2)
     }
     return $result;
 }
+
+function progression($quantity = 10)
+{
+    $initValue = rand(0, 50);
+    $step = rand(1, 10);
+    $result[0] = $initValue;
+    for ($i = 1; $i <= $quantity - 1; $i++) {
+        $result[$i] = $result[$i - 1] + $step;
+    }
+    return $result;
+}
