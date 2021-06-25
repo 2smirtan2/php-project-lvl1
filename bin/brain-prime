@@ -13,12 +13,12 @@ if (file_exists($autoloadPath1)) {
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-$data = function() 
-{
+const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+$data = function () {
     $question = rand(1, 20);
-    $answer = Helper\isEven($question) ? "yes" : "no";
+    $answer = Helper\isPrime($question) ? "yes" : "no";
     return [$question, $answer];
 };
 

@@ -4,7 +4,7 @@ namespace Brain\Games\Helper;
 
 function isEven($num)
 {
-    return $num % 2 === 0 ? "yes" : "no";
+    return $num % 2 === 0;
 }
 
 function calc($num1, $num2, $mathSing)
@@ -43,4 +43,20 @@ function progression($quantity = 10)
         $result[$i] = $result[$i - 1] + $step;
     }
     return $result;
+}
+
+function isPrime($num)
+{
+    if ($num < 2) {
+        return false;
+    } elseif ($num === 2) {
+        return true;
+    } else {
+        for ($i = 3; $i < $num; $i++) {
+            if ($num % $i === 0) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
