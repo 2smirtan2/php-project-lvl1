@@ -5,5 +5,7 @@
 
 [![Actions Status](https://github.com/2smirtan2/php-project-lvl1/workflows/make-lint/badge.svg)](https://github.com/2smirtan2/php-project-lvl1/actions)
 
-### Demonsrtation
+### Demonsrtation:
 [brain-even](https://asciinema.org/a/FjRa7smbFJrRt4RwVpC8Bm3RN)
+
+[brain-calc](https://asciinema.org/a/ZHqR6u4DEXM0lEKF5muABqPqq)

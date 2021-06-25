@@ -1,6 +1,9 @@
 <?php
 
-namespace Brain\Games\Raner;
+namespace Brain\Games\Engine;
+
+use Brain\Games\Even;
+use Brain\Games\Calc;
 
 use function cli\line;
 use function cli\prompt;
@@ -13,21 +16,15 @@ function salut()
     return $name;
 }
 
-function isEven($num)
-{
-    return $num % 2 === 0 ? "yes" : "no";
-}
-
-function run()
+function run($description, $data)
 {
     $name = salut();
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    line($description);
     for ($i = 1; $i <= 3; $i++) {
-        $randNumber = rand(1, 20);
-        line("Question: %s", $randNumber);
-        $userAnswer = prompt('Your answer:');
-        $answer = isEven($randNumber);
-        if ($userAnswer === $answer) {
+        [$question, $answer] = $data();
+        line("Question: %s", $question);
+        $userAnswer = prompt('Your answer');
+        if ($userAnswer == $answer) {
             line("Correct!");
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $answer);
