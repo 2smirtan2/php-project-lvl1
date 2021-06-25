@@ -9,11 +9,11 @@
 
     $ git clone https://github.com/2smirtan2/php-project-lvl1.git
 
-    make install
+    $ make install
 
 ## Run lint
 
-    make lint
+    $ make lint
 
 
 ## Demonsrtation games:
