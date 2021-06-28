@@ -2,18 +2,18 @@
 
 namespace Brain\Games\Helper;
 
-function isEven($num)
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
 
-function check($fn, $num)
+function check(callable $fn, int $num): string
 {
     $result = $fn($num) ? "yes" : "no";
     return $result;
 }
 
-function calc($num1, $num2, $mathSing)
+function calc(int $num1, int $num2, string $mathSing): int
 {
     switch ($mathSing) {
         case '+':
@@ -28,7 +28,7 @@ function calc($num1, $num2, $mathSing)
     }
 }
 
-function gcd($num1, $num2)
+function gcd(int $num1, int $num2): int
 {
     $result = 1;
     $limit = $num1 < $num2 ? $num1 : $num2;
@@ -40,7 +40,7 @@ function gcd($num1, $num2)
     return $result;
 }
 
-function progression($quantity = 10)
+function progression(int $quantity = 10): array
 {
     $initValue = rand(0, 50);
     $step = rand(1, 10);
@@ -51,7 +51,7 @@ function progression($quantity = 10)
     return $result;
 }
 
-function isPrime($num)
+function isPrime(int $num): bool
 {
     if ($num < 2) {
         return false;
