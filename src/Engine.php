@@ -28,7 +28,7 @@ function render($description, $data)
             line("Correct!");
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $answer);
-            return line('Let\'s try again, %s', $name);
+            return line('Let\'s try again, %s!', $name);
         }
     }
     return line("Congratulations, %s!", $name);
