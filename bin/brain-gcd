@@ -10,18 +10,6 @@ if (file_exists($autoloadPath1)) {
     include_once $autoloadPath2;
 }
 
-use Brain\Games\Engine;
-use Brain\Games\Helper;
+use Brain\Games\Gcd;
 
-
-const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
-
-$data = function () {
-    $randNum1 = rand(1, 10);
-    $randNum2 = rand(1, 10);
-    $question = "{$randNum1} {$randNum2}";
-    $answer = Helper\gcd($randNum1, $randNum2);
-    return [$question, $answer];
-};
-
-Engine\run(DESCRIPTION, $data);
+Gcd\run();

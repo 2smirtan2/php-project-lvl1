@@ -10,20 +10,6 @@ if (file_exists($autoloadPath1)) {
     include_once $autoloadPath2;
 }
 
-use Brain\Games\Engine;
-use Brain\Games\Helper;
+use Brain\Games\Calc;
 
-
-const DESCRIPTION = 'What is the result of the expression?';
-
-$data = function () {
-    $mathSings = ['+', '-', '*'];
-    $randSing = $mathSings[rand(0, 2)];
-    $randNum1 = rand(1, 10);
-    $randNum2 = rand(1, 10);
-    $question = "{$randNum1} {$randSing} {$randNum2}";
-    $answer = Helper\calc($randNum1, $randNum2, $randSing);
-    return [$question, $answer];
-};
-
-Engine\run(DESCRIPTION, $data);
+Calc\run();

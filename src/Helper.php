@@ -7,6 +7,12 @@ function isEven($num)
     return $num % 2 === 0;
 }
 
+function check($fn, $num)
+{
+    $result = $fn($num) ? "yes" : "no";
+    return $result;
+}
+
 function calc($num1, $num2, $mathSing)
 {
     switch ($mathSing) {

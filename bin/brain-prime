@@ -10,16 +10,6 @@ if (file_exists($autoloadPath1)) {
     include_once $autoloadPath2;
 }
 
-use Brain\Games\Engine;
-use Brain\Games\Helper;
+use Brain\Games\Prime;
 
-
-const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
-$data = function () {
-    $question = rand(1, 20);
-    $answer = Helper\isPrime($question) ? "yes" : "no";
-    return [$question, $answer];
-};
-
-Engine\run(DESCRIPTION, $data);
+Prime\run();
