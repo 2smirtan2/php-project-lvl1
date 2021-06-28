@@ -8,7 +8,7 @@ use Brain\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function salut() : string
+function salut(): string
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I have you name?');
@@ -16,7 +16,7 @@ function salut() : string
     return $name;
 }
 
-function render($description, $data) : void
+function render($description, $data): string
 {
     $name = salut();
     line($description);
