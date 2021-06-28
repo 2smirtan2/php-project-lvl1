@@ -5,11 +5,11 @@ namespace Brain\Games\Calc;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run()
+function run(): string
 {
     $description = 'What is the result of the expression?';
 
-    $data = function () {
+    $data = function (): array {
         $mathSings = ['+', '-', '*'];
         $randSing = $mathSings[rand(0, 2)];
         $randNum1 = rand(1, 10);
