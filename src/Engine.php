@@ -16,7 +16,7 @@ function salut(): string
     return $name;
 }
 
-function render($description, $data): string
+function render($description, $data): ?string
 {
     $name = salut();
     line($description);
