@@ -5,7 +5,7 @@ namespace Brain\Games\Prime;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run()
+function run(): mixed
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

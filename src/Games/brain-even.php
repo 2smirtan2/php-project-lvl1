@@ -5,7 +5,7 @@ namespace Brain\Games\Even;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run()
+function run(): mixed
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
 

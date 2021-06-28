@@ -5,7 +5,7 @@ namespace Brain\Games\Calc;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run(): ?string
+function run(): mixed
 {
     $description = 'What is the result of the expression?';
 

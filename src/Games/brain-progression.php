@@ -5,7 +5,7 @@ namespace Brain\Games\Progression;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run()
+function run(): mixed
 {
     $description = 'What number is missing in the progression?';
 
