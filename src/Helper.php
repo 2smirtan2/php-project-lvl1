@@ -56,7 +56,7 @@ function isPrime(int $num): bool
     } elseif ($num === 2) {
         return true;
     } else {
-        for ($i = 3; $i < $num; $i++) {
+        for ($i = 2; $i < $num; $i++) {
             if ($num % $i === 0) {
                 return false;
             }
