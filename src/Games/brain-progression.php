@@ -9,7 +9,7 @@ function run()
 {
     $description = 'What number is missing in the progression?';
 
-    $data = function () {
+    $data = function (): array {
         $setNumbers = Helper\progression();
         $length = count($setNumbers);
         $happyIndex = rand(0, $length - 1);

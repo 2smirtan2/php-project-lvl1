@@ -9,7 +9,7 @@ function run()
 {
     $description = 'Find the greatest common divisor of given numbers.';
 
-    $data = function () {
+    $data = function (): array {
         $randNum1 = rand(1, 10);
         $randNum2 = rand(1, 10);
         $question = "{$randNum1} {$randNum2}";

@@ -9,7 +9,7 @@ function run()
 {
     $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-    $data = function () {
+    $data = function (): array {
         $question = rand(1, 20);
         $answer = Helper\check('Brain\Games\Helper\isPrime', $question);
         return [$question, $answer];
