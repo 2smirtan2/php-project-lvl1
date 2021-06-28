@@ -20,7 +20,7 @@ function calc(int $num1, int $num2, string $mathSing): int
             return $num1 + $num2;
         case '-':
             return $num1 - $num2;
-        case '*':
+        default:
             return $num1 * $num2;
     }
 }
@@ -41,6 +41,7 @@ function progression(int $quantity = 10): array
 {
     $initValue = rand(0, 50);
     $step = rand(1, 10);
+    $result = [];
     $result[0] = $initValue;
     for ($i = 1; $i <= $quantity - 1; $i++) {
         $result[$i] = $result[$i - 1] + $step;
