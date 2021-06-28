@@ -5,7 +5,7 @@ namespace Brain\Games\Gcd;
 use Brain\Games\Engine;
 use Brain\Games\Helper;
 
-function run(): mixed
+function run(): void
 {
     $description = 'Find the greatest common divisor of given numbers.';
 
