@@ -18,13 +18,10 @@ function calc(int $num1, int $num2, string $mathSing): int
     switch ($mathSing) {
         case '+':
             return $num1 + $num2;
-            break;
         case '-':
             return $num1 - $num2;
-            break;
         case '*':
             return $num1 * $num2;
-            break;
     }
 }
 
