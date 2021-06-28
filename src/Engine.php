@@ -8,7 +8,7 @@ use Brain\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 
-function salut()
+function salut() : string
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I have you name?');
