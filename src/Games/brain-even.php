@@ -9,7 +9,7 @@ function run()
 {
     $description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    $data = function () {
+    $data = function (): array {
         $question = rand(1, 20);
         $answer = Helper\check('Brain\Games\Helper\isEven', $question);
         return [$question, $answer];
