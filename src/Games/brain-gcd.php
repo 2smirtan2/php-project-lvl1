@@ -3,7 +3,18 @@
 namespace Brain\Games\Gcd;
 
 use Brain\Games\Engine;
-use Brain\Games\Helper;
+
+function gcd(int $num1, int $num2): int
+{
+    $result = 1;
+    $limit = $num1 < $num2 ? $num1 : $num2;
+    for ($i = 2; $i <= $limit; $i++) {
+        if ($num1 % $i === 0 && $num2 % $i === 0) {
+            $result = $i;
+        }
+    }
+    return $result;
+}
 
 function run(): void
 {
@@ -13,7 +24,7 @@ function run(): void
         $randNum1 = rand(1, 10);
         $randNum2 = rand(1, 10);
         $question = "{$randNum1} {$randNum2}";
-        $answer = Helper\gcd($randNum1, $randNum2);
+        $answer = gcd($randNum1, $randNum2);
         return [$question, $answer];
     };
 

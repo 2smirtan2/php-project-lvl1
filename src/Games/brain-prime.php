@@ -3,7 +3,28 @@
 namespace Brain\Games\Prime;
 
 use Brain\Games\Engine;
-use Brain\Games\Helper;
+
+function isPrime(int $num): bool
+{
+    if ($num < 2) {
+        return false;
+    } elseif ($num === 2) {
+        return true;
+    } else {
+        for ($i = 2; $i < $num; $i++) {
+            if ($num % $i === 0) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function check(int $num): string
+{
+    $result = isPrime($num) ? "yes" : "no";
+    return $result;
+}
 
 function run(): void
 {
@@ -11,7 +32,7 @@ function run(): void
 
     $data = function (): array {
         $question = rand(0, 21);
-        $answer = Helper\check('Brain\Games\Helper\isPrime', $question);
+        $answer = check($question);
         return [$question, $answer];
     };
 

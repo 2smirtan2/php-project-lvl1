@@ -2,9 +2,6 @@
 
 namespace Brain\Games\Engine;
 
-use Brain\Games\Even;
-use Brain\Games\Calc;
-
 use function cli\line;
 use function cli\prompt;
 
