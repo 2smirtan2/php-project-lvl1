@@ -18,7 +18,9 @@ function render(string $description, callable $data): ?string
     $name = salut();
     line($description);
     for ($i = 1; $i <= 3; $i++) {
-        [$question, $answer] = $data();
+        $gameData = $data();
+        $question = $gameData['question'];
+        $answer = $gameData['answer'];
         line("Question: %s", $question);
         $userAnswer = prompt('Your answer');
         if ($userAnswer == $answer) {

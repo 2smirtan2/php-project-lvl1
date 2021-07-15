@@ -27,7 +27,10 @@ function run(): void
         $randNum2 = rand(1, 10);
         $question = "{$randNum1} {$randSing} {$randNum2}";
         $answer = calc($randNum1, $randNum2, $randSing);
-        return [$question, $answer];
+        $gameData = [];
+        $gameData['question'] = $question;
+        $gameData['answer'] = $answer;
+        return $gameData;
     };
 
     Engine\render($description, $data);

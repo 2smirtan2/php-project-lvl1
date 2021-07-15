@@ -33,7 +33,10 @@ function run(): void
     $data = function (): array {
         $question = rand(0, 21);
         $answer = check($question);
-        return [$question, $answer];
+        $gameData = [];
+        $gameData['question'] = $question;
+        $gameData['answer'] = $answer;
+        return $gameData;
     };
 
     Engine\render($description, $data);

@@ -25,7 +25,10 @@ function run(): void
         $randNum2 = rand(1, 10);
         $question = "{$randNum1} {$randNum2}";
         $answer = gcd($randNum1, $randNum2);
-        return [$question, $answer];
+        $gameData = [];
+        $gameData['question'] = $question;
+        $gameData['answer'] = $answer;
+        return $gameData;
     };
 
     Engine\render($description, $data);
