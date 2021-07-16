@@ -11,8 +11,7 @@ function isEven(int $num): bool
 
 function check(int $num): string
 {
-    $result = isEven($num) ? "yes" : "no";
-    return $result;
+    return isEven($num) ? "yes" : "no";
 }
 
 function run(): void
@@ -22,10 +21,7 @@ function run(): void
     $data = function (): array {
         $question = rand(1, 20);
         $answer = check($question);
-        $gameData = [];
-        $gameData['question'] = $question;
-        $gameData['answer'] = $answer;
-        return $gameData;
+        return ['question' => $question, 'answer' => $answer];
     };
     Engine\render($description, $data);
 }

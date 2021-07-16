@@ -8,13 +8,10 @@ function isPrime(int $num): bool
 {
     if ($num < 2) {
         return false;
-    } elseif ($num === 2) {
-        return true;
-    } else {
-        for ($i = 2; $i < $num; $i++) {
-            if ($num % $i === 0) {
-                return false;
-            }
+    }
+    for ($i = 2; $i <= $num / 2; $i++) {
+        if ($num % $i === 0) {
+            return false;
         }
     }
     return true;
@@ -22,8 +19,7 @@ function isPrime(int $num): bool
 
 function check(int $num): string
 {
-    $result = isPrime($num) ? "yes" : "no";
-    return $result;
+    return isPrime($num) ? "yes" : "no";
 }
 
 function run(): void
@@ -33,10 +29,7 @@ function run(): void
     $data = function (): array {
         $question = rand(0, 21);
         $answer = check($question);
-        $gameData = [];
-        $gameData['question'] = $question;
-        $gameData['answer'] = $answer;
-        return $gameData;
+        return ['question' => $question, 'answer' => $answer];
     };
 
     Engine\render($description, $data);

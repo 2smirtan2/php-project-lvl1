@@ -33,10 +33,7 @@ function run(): void
             }
         }
         $answer = $setNumbers[$happyIndex];
-        $gameData = [];
-        $gameData['question'] = $question;
-        $gameData['answer'] = $answer;
-        return $gameData;
+        return ['question' => $question, 'answer' => $answer];
     };
 
     Engine\render($description, $data);
