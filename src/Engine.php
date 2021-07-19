@@ -5,17 +5,11 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function salute(): string
+function render(string $description, callable $data): ?string
 {
     line("Welcome to the Brain Games!");
     $name = prompt('May I have you name?');
     line("Hello, %s!", $name);
-    return $name;
-}
-
-function render(string $description, callable $data): ?string
-{
-    $name = salute();
     line($description);
     for ($i = 1; $i <= 3; $i++) {
         $gameData = $data();

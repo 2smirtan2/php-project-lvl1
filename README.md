@@ -16,13 +16,18 @@
     $ make lint
 
 
-## Demonsrtation games:
-> [brain-even](https://asciinema.org/a/FjRa7smbFJrRt4RwVpC8Bm3RN)
+## Demonstration games:
+### brain-even
+> [![asciicast](https://asciinema.org/a/FjRa7smbFJrRt4RwVpC8Bm3RN.svg)](https://asciinema.org/a/FjRa7smbFJrRt4RwVpC8Bm3RN)
 
-> [brain-calc](https://asciinema.org/a/ZHqR6u4DEXM0lEKF5muABqPqq)
+### brain-calc
+> [![asciicast](https://asciinema.org/a/ZHqR6u4DEXM0lEKF5muABqPqq.svg)](https://asciinema.org/a/ZHqR6u4DEXM0lEKF5muABqPqq)
 
-> [brain-gcd](https://asciinema.org/a/iw4Og1LR15p0T0DObGnRnTsWG)
+### brain-gcd
+> [![asciicast](https://asciinema.org/a/iw4Og1LR15p0T0DObGnRnTsWG.svg)](https://asciinema.org/a/iw4Og1LR15p0T0DObGnRnTsWG)
 
-> [brain-progression](https://asciinema.org/a/m15m8wPSrvU0xc4H4sFoflH61)
+### brain-progression
+> [![asciicast](https://asciinema.org/a/m15m8wPSrvU0xc4H4sFoflH61.svg)](https://asciinema.org/a/m15m8wPSrvU0xc4H4sFoflH61)
 
-> [brain-prime](https://asciinema.org/a/27L5DF9kLGfBOgcNimMVtOAvq)
+### brain-prime
+> [![asciicast](https://asciinema.org/a/27L5DF9kLGfBOgcNimMVtOAvq.svg)](https://asciinema.org/a/27L5DF9kLGfBOgcNimMVtOAvq)

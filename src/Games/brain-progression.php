@@ -16,22 +16,28 @@ function progression(int $quantity = 10): array
     return $result;
 }
 
+function generateQuestion(array $numbers, int $index): string
+{
+    $length = count($numbers);
+    $question = '';
+    for ($i = 0; $i <= $length - 1; $i++) {
+        if ($i === $index) {
+            $question .= '.. ';
+        } else {
+            $question .= $numbers[$i] . ' ';
+        }
+    }
+    return $question;
+}
+
 function run(): void
 {
     $description = 'What number is missing in the progression?';
 
     $data = function (): array {
         $setNumbers = progression();
-        $length = count($setNumbers);
-        $happyIndex = rand(0, $length - 1);
-        $question = '';
-        for ($i = 0; $i <= $length - 1; $i++) {
-            if ($i === $happyIndex) {
-                $question .= '.. ';
-            } else {
-                $question .= $setNumbers[$i] . ' ';
-            }
-        }
+        $happyIndex = rand(0, count($setNumbers) - 1);
+        $question = generateQuestion($setNumbers, $happyIndex);
         $answer = $setNumbers[$happyIndex];
         return ['question' => $question, 'answer' => $answer];
     };
